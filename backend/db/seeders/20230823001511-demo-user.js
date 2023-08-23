@@ -33,14 +33,14 @@ const userData = [
 
 module.exports = {
   up: async (queryInterface) => {
-    return queryInterface.bulkInsert('Users', userData);
+    await queryInterface.bulkInsert('Users', userData);
   },
 
   down: async (queryInterface, Sequelize) => {
     const Op = Sequelize.Op;
     const usernamesToDelete = userData.map((user) => user.username);
 
-    return queryInterface.bulkDelete('Users', {
+    await queryInterface.bulkDelete('Users', {
       username: { [Op.in]: usernamesToDelete },
     });
   },

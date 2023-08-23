@@ -31,7 +31,7 @@ module.exports = {
       },
     ];
 
-    return queryInterface.bulkInsert(options.tableName, bookingsData, {});
+    await queryInterface.bulkInsert(options.tableName, bookingsData, {});
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -39,6 +39,6 @@ module.exports = {
       tableName: 'Bookings',
     };
 
-    return queryInterface.bulkDelete(options.tableName, null, {});
+    await queryInterface.bulkDelete(options.tableName, null, {});
   },
 };
