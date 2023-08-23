@@ -6,7 +6,7 @@ const userData = [
     firstName: 'Bro',
     lastName: 'Dude',
     email: 'demo@user.io',
-    username: 'Demo-lition',
+    username: 'Demo-lition-2',
     hashedPassword: bcrypt.hashSync('password'),
     createdAt: new Date(),
     updatedAt: new Date(),
@@ -45,4 +45,3 @@ module.exports = {
     });
   },
 };
-
